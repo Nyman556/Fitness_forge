@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+	--main-color: #2c2922;
+	--secondary-color: #b8aa87;
+	--tertiary-color: #0a2f29;
+	--highlight-color: #7fb6ab;
+	--white: #f5f5f7;
+	--black: #1d1d1f;
+	--main-font: "Bebas Neue", cursive;
+}
+
+body {
+	background: rgb(44, 41, 34);
+	background: linear-gradient(
+		122deg,
+		rgba(44, 41, 34, 1) 0%,
+		rgba(71, 66, 60, 1) 100%
+	);
+	font: var(--main-font);
+}
