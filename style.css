@@ -98,15 +98,20 @@ a:hover[href] {
 	display: flex;
 	gap: 3rem;
 }
-.btn {
-	padding: 1.5rem 2rem;
+.btn,
+.inverted-btn {
+	padding: 1rem 2rem;
 	border: 1px solid var(--white);
 	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	color: var(--white);
+	font-family: var(--main-font);
+	cursor: pointer;
 }
 .inverted-btn {
-	padding: 1.5rem 2rem;
-	border: 1px solid var(--white);
-	font-size: 1.5rem;
 	color: var(--black);
 	background-color: var(--white);
 }
@@ -116,7 +121,7 @@ a:hover[href] {
 	left: 0px;
 	width: 100%;
 	background-color: var(--highlight-color);
-	height: 9vh;
+	height: 8vh;
 	justify-content: space-around;
 	align-items: center;
 }
@@ -131,3 +136,39 @@ h1 {
 .highlight {
 	color: var(--highlight-color);
 }
+
+/*Login*/
+
+.login-main,
+.register-main {
+	height: 90vh;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+#login-form,
+#register-form {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+.field input {
+	padding: 0 0.5rem;
+	width: 14rem;
+	height: 3rem;
+	background: none;
+	border: none;
+	border: 1px solid var(--white);
+	border-radius: 6px;
+	color: var(--white);
+}
+
+/*REGISTER*/

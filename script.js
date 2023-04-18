@@ -10,15 +10,13 @@ function toggle() {
 		state++;
 		hamburger.setAttribute("currentState", state);
 		updateIcons();
-		dropdown.classList.remove("hidden");
-		dropdown.classList.add("flex");
+		dropdown.classList.replace("hidden", "flex");
 		return;
 	} else hamburger.innerHTML = '<i data-feather="menu"></i>';
 	hamburger.setAttribute("currentState", "0");
 	state--;
 	updateIcons();
-	dropdown.classList.remove("flex");
-	dropdown.classList.add("hidden");
+	dropdown.classList.replace("flex", "hidden");
 }
 
 function updateIcons() {

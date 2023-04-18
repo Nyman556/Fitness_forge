@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title></title>
+		<title>Login</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="reset.css" />
@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<header class="flex">
-			<a id="hamburger-menu" CurrentState="0" onclick="toggle(this)">
+			<a id="hamburger-menu" CurrentState="0" onclick="toggle()">
 				<i data-feather="menu"></i>
 			</a>
 			<div id="dropdown" class="hidden">
@@ -29,28 +29,20 @@
 				<a href="#">locations</a>
 			</div>
 		</header>
-		<section class="landing-content flex">
-			<div class="hero-text">
-				<h1>Start your journey <span class="highligt">today</span></h1>
-				<p>
-					Ready to make a positive change in your life? Start your journey today
-					with us and let us help you<br />
-					achieve your fitness goals
-				</p>
-				<div class="hero-btn-wrapper">
-					<a href="login.html" class="btn">log in</a>
-					<a href="register.html" class="inverted-btn">register</a>
+		<main class="login-main">
+			<h1>LOG IN</h1>
+			<form id="login-form" action="">
+				<div class="field">
+					<label for="username">username *</label>
+					<input name="username" type="text" />
 				</div>
-			</div>
-			<div class="hero-wrapper">
-				<img class="hero" src="assets/Group 35.png" alt="" />
-			</div>
-			<div class="sponsor-banner flex">
-				<img src="assets/Nike_logo.png" alt="nike logo" />
-				<img src="assets/Gymshark_logo.png" alt="gymshark logo" />
-				<img src="assets/adidas_logo.png" alt="adidas logo" />
-			</div>
-		</section>
+				<div class="field">
+					<label for="password">password *</label>
+					<input type="password" name="password" />
+				</div>
+				<button class="btn">log in</button>
+			</form>
+		</main>
 		<script src="script.js" async defer></script>
 	</body>
 </html>
