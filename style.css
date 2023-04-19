@@ -65,7 +65,10 @@ header {
 .hidden {
 	display: none;
 }
-
+html,
+body {
+	height: 100%;
+}
 body {
 	background: rgb(44, 41, 34);
 	background: linear-gradient(
@@ -73,6 +76,7 @@ body {
 		rgba(44, 41, 34, 1) 30%,
 		rgba(184, 170, 135, 1) 100%
 	);
+	background-size: auto, cover;
 	font-family: var(--main-font);
 }
 a {
@@ -117,6 +121,9 @@ section,
 main {
 	max-height: 100%;
 	color: var(--white);
+}
+main {
+	height: 100vh;
 }
 #about {
 	height: 100vh;
@@ -188,6 +195,10 @@ h3 {
 	color: var(--highlight-color);
 }
 
+#about,
+#locations {
+	background-color: var(--black);
+}
 /*Login*/
 
 .login-main,
@@ -252,6 +263,7 @@ h3 {
 .slide-container {
 	position: relative;
 	background-color: var(--black);
+	min-width: 350px;
 }
 slide img {
 	width: 100%;
@@ -261,11 +273,9 @@ slide img {
 	width: 100%;
 }
 
-/* Caption text */
 .text {
 	color: #f2f2f2;
 	font-size: 15px;
-	padding: 8px 12px;
 	position: absolute;
 	bottom: 8px;
 	width: 100%;
@@ -329,4 +339,38 @@ slide img {
 	vertical-align: middle;
 	width: 100%;
 	max-height: 700px;
+}
+
+@media (max-width: 575.98px) {
+	.header-content {
+		gap: 1rem;
+	}
+	.navbar {
+		gap: 2rem;
+	}
+	.hero {
+		position: absolute;
+		top: 10px;
+		z-index: -3;
+		filter: brightness(0.5);
+	}
+	.hero-text {
+		padding: 1rem;
+		align-items: center;
+	}
+	#landing {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 1399.98px) {
 }
