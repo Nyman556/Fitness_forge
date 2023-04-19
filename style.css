@@ -374,3 +374,21 @@ slide img {
 
 @media (max-width: 1399.98px) {
 }
+
+/*Pricing*/
+#pricing {
+	background-color: var(--black);
+	height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.pricing-text {
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.pricing-title {
+	text-align: center;
+}
