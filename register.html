@@ -11,22 +11,25 @@
 		<script src="https://unpkg.com/feather-icons"></script>
 	</head>
 	<body>
-		<header class="flex">
-			<a id="hamburger-menu" CurrentState="0" onclick="toggle()">
-				<i data-feather="menu"></i>
-			</a>
-			<div id="dropdown" class="hidden">
-				<ul class="dropdown-list">
-					<li><a href="login.html">Login</a></li>
-					<li><a href="register.html">Register</a></li>
-				</ul>
-			</div>
-			<div class="navbar flex">
-				<a href="index.html">home</a>
-				<a href="#">About</a>
-				<a href="#">plans</a>
-				<a href="#">price</a>
-				<a href="#">locations</a>
+		<header id="header" class="flex">
+			<div class="header-content flex">
+				<a id="hamburger-menu" CurrentState="0" onclick="toggle(this)">
+					<i data-feather="menu"></i>
+				</a>
+				<div id="dropdown" class="hidden">
+					<h3 class="dropdown-title">fitness forge</h3>
+					<ul class="dropdown-list">
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</div>
+				<div class="navbar flex">
+					<a href="index.html">home</a>
+					<a href="#about">About</a>
+					<a href="#">plans</a>
+					<a href="#">price</a>
+					<a href="#">locations</a>
+				</div>
 			</div>
 		</header>
 		<main class="register-main">

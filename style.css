@@ -11,7 +11,20 @@
 }
 header {
 	color: var(--white);
-	padding: 2rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	border-bottom: 1px solid var(--white);
+	background-color: var(--main-color);
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.header-content {
+	padding: 1rem;
 	align-items: center;
 	gap: 15rem;
 }
@@ -22,14 +35,18 @@ header {
 .navbar {
 	gap: 17vw;
 }
+.dropdown-title {
+	border-bottom: 1px solid white;
+}
 #dropdown {
 	position: absolute;
+	flex-direction: column;
 	top: 0;
 	left: 0;
 	gap: 1rem;
-	background-color: #0a2f29;
+	background-color: var(--black);
 	width: 10vw;
-	height: 100%;
+	height: 100vh;
 	align-items: center;
 	justify-content: center;
 }
@@ -37,7 +54,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	width: 100%;
 }
 .dropdown-list li {
@@ -96,7 +113,16 @@ a:hover[href] {
 	color: inherit;
 }
 /*HERO SECTION*/
+section,
+main {
+	max-height: 100%;
+	color: var(--white);
+}
+#about {
+	height: 100vh;
+}
 .landing-content {
+	padding-top: 3.5rem;
 	justify-content: space-around;
 }
 .hero-text {
@@ -104,7 +130,6 @@ a:hover[href] {
 	flex-direction: column;
 	justify-content: center;
 	gap: 3rem;
-	color: var(--white);
 }
 .hero {
 	height: 800px;
@@ -112,22 +137,23 @@ a:hover[href] {
 }
 .hero-btn-wrapper {
 	display: flex;
+	justify-content: space-between;
 	gap: 3rem;
 }
 .logo {
 	height: auto;
 	max-width: 210px;
+	align-self: center;
 }
 .btn,
 .inverted-btn {
-	padding: 1rem 2rem;
+	padding: 0.7rem 2rem;
 	border: 1px solid var(--white);
 	font-size: 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: none;
-	color: var(--white);
 	font-family: var(--main-font);
 	cursor: pointer;
 }
@@ -137,8 +163,7 @@ a:hover[href] {
 }
 .sponsor-banner {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	top: 92vh;
 	width: 100%;
 	background-color: var(--highlight-color);
 	height: 8vh;
@@ -202,18 +227,9 @@ h3 {
 /*About section*/
 .about-content {
 	padding-top: 10rem;
-	background: rgb(44, 41, 34);
-	background: linear-gradient(
-		142deg,
-		rgba(44, 41, 34, 1) 30%,
-		rgba(184, 170, 135, 1) 100%
-	);
-	background-color: green;
 	color: var(--white);
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
-	max-width: 100%;
 	gap: 5rem;
 }
 .about-text-wrapper {
@@ -222,4 +238,95 @@ h3 {
 	justify-content: center;
 	max-width: 350px;
 	gap: 1rem;
+}
+
+/*Locations*/
+#locations {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 3rem;
+}
+.slide-container {
+	position: relative;
+	background-color: var(--black);
+}
+slide img {
+	width: 100%;
+}
+
+.slide {
+	width: 100%;
+}
+
+/* Caption text */
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 1rem 1rem;
+	color: var(--highlight-color);
+	font-weight: bold;
+	font-size: 1rem;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-container {
+	width: 40%;
+}
+.slide {
+	display: none;
+}
+.slide img {
+	vertical-align: middle;
+	width: 100%;
+	max-height: 700px;
 }

@@ -43,6 +43,7 @@ table {
 }
 a {
     text-decoration: none;
+	user-select: none;
 }
 input {
 	border: none;
