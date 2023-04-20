@@ -13,7 +13,7 @@
 	<body>
 		<header id="header" class="flex">
 			<div class="header-content flex">
-				<a id="hamburger-menu" CurrentState="0" onclick="toggle(this)">
+				<a id="hamburger-menu" CurrentState="0" onclick="toggle()">
 					<i data-feather="menu"></i>
 				</a>
 				<div id="dropdown" class="hidden">
@@ -27,14 +27,14 @@
 					<a href="index.html">home</a>
 					<a href="#about">About</a>
 					<a href="#">plans</a>
-					<a href="#">price</a>
-					<a href="#">locations</a>
+					<a href="#pricing">price</a>
+					<a href="#locations">locations</a>
 				</div>
 			</div>
 		</header>
 		<main class="login-main">
 			<h1>LOG IN</h1>
-			<form id="login-form" action="">
+			<form id="login-form" class="flex flex-dir-c" action="">
 				<div class="field">
 					<label for="username">username *</label>
 					<input name="username" type="text" />

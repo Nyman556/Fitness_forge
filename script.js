@@ -1,11 +1,10 @@
 const hamburger = document.getElementById("hamburger-menu");
 const dropdown = document.getElementById("dropdown");
-
+const landing = document.getElementById("landing");
 let slideIndex = 1;
 let state = 0;
 
 updateIcons();
-showSlides();
 
 function toggle() {
 	if (state == 0) {
@@ -97,7 +96,7 @@ const tableData = {
 		],
 		sets: [4, 4, 3, 3, 4, 4],
 		reps: ["AMRAP", 10, 8, 10, 10, 10],
-		time: ["60s", "60s", "120s", "60s", "60s", "60s"],
+		time: ["60s", "60s", "160s", "60s", "60s", "60s"],
 	},
 	legsData: {
 		exercises: [
@@ -161,4 +160,7 @@ function renderTable(n) {
 	}
 }
 
-renderTable(1);
+if (landing != null) {
+	showSlides();
+	renderTable(1);
+}
