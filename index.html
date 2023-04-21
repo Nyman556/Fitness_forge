@@ -11,19 +11,14 @@
 		<script src="https://unpkg.com/feather-icons"></script>
 	</head>
 	<body>
-		<div class="socials-container flex flex-dir-c">
-			<a href="https://www.facebook.com"><i data-feather="facebook"></i></a>
-			<a href="https://www.instagram.com"><i data-feather="instagram"></i></a>
-			<a href="mailto:email@example.com"><i data-feather="send"></i></a>
-		</div>
 		<header id="header" class="flex">
 			<div class="header-content flex">
 				<a id="hamburger-menu" CurrentState="0" onclick="toggle(this)">
 					<i data-feather="menu"></i>
 				</a>
-				<div id="dropdown" class="hidden">
+				<div id="dropdown" class="hidden flex-dir-c flex-center">
 					<h3 class="dropdown-title">fitness forge</h3>
-					<ul class="dropdown-list">
+					<ul class="dropdown-list flex flex-dir-c">
 						<li><a href="login.html">Login</a></li>
 						<li><a href="register.html">Register</a></li>
 					</ul>
@@ -31,14 +26,14 @@
 				<div class="navbar flex">
 					<a href="index.html">home</a>
 					<a href="#about">About</a>
-					<a href="#">plans</a>
+					<a href="#plans">plans</a>
 					<a href="#pricing">price</a>
 					<a href="#locations">locations</a>
 				</div>
 			</div>
 		</header>
 		<section id="landing" class="landing-content flex">
-			<div class="hero-text">
+			<div class="hero-text flex flex-dir-c">
 				<h1>
 					Start your journey<br />
 					<span class="highligt">today</span>
@@ -63,7 +58,7 @@
 			<img src="assets/Gymshark_logo.png" alt="gymshark logo" />
 			<img src="assets/adidas_logo.png" alt="adidas logo" />
 		</div>
-		<section id="about" class="about-content flex flex-dir-c">
+		<section id="about" class="about-content flex flex-dir-c flex-center">
 			<div class="about-text-wrapper flex flex-dir-c">
 				<h3>Find out more</h3>
 				<h2 class="highlight">About Us</h2>
@@ -91,46 +86,24 @@
 			</div>
 			<img class="logo" src="assets/company_logo.png" alt="" />
 		</section>
-		<section id="locations" class="flex flex-dir-c">
-			<h3>Where we're at</h3>
-			<div class="slide-container">
-				<div class="slide slide-one">
-					<div class="numbertext"><h2>01</h2></div>
-					<img src="assets/gym_one-min.jpg" />
-					<div class="text">
-						<h2 class="highlight">Göteborg</h2>
-						<p>Örgrytevägen 5, 402 22 Göteborg</p>
-					</div>
-				</div>
-				<div class="slide slide-two">
-					<div class="numbertext"><h2>02</h2></div>
-					<img src="assets/gym_two-min.jpg" />
-					<div class="text">
-						<h2 class="highlight">Stockholm</h2>
-						<p>Galärvarvsvägen 14, 115 21 Stockholm</p>
-					</div>
-				</div>
-				<div class="slide slide-three">
-					<div class="numbertext"><h2>03</h2></div>
-					<img src="assets/gym_three-min.jpg" />
-					<div class="text">
-						<h2 class="highlight">Växjö</h2>
-						<p>Klostergatan 10 B, 352 31 Växjö</p>
-					</div>
-				</div>
-				<a class="prev" onclick="plusSlides(-1)"
-					><i data-feather="chevron-left"></i>
-				</a>
-				<a class="next" onclick="plusSlides(1)">
-					<i data-feather="chevron-right"></i>
-				</a>
+		<section id="plans" class="flex flex-dir-c">
+			<h2>We offer plans like these:</h2>
+			<div class="toggle-plans-container flex">
+				<a class="plans-toggle" onclick="togglePlan(0)">PUSH</a>
+				<a class="plans-toggle plans-active" onclick="togglePlan(1)">PULL</a>
+				<a class="plans-toggle" onclick="togglePlan(2)">LEGS</a>
+			</div>
+			<div class="table-container">
+				<table id="table">
+					<tr id="table-head"></tr>
+				</table>
 			</div>
 		</section>
-		<section id="pricing">
+		<section id="pricing" class="flex">
 			<div class="pricing-content">
-				<img src="assets/cards.png" alt="" />
+				<img src="assets/cards.png" alt="picture of membership cards" />
 			</div>
-			<div class="pricing-text">
+			<div class="pricing-text flex flex-dir-c">
 				<div class="pricing-title">
 					<p>We offer three kinds of memberships</p>
 					<h2 class="highlight">pricing</h2>
@@ -157,19 +130,42 @@
 				</p>
 			</div>
 		</section>
-		<section id="plans" class="flex flex-dir-c">
-			<h2>We offer plans like this one:</h2>
-			<div class="toggle-plans-container flex">
-				<a class="plans-toggle" onclick="togglePlan(0)">PUSH</a>
-				<a class="plans-toggle plans-active" onclick="togglePlan(1)">PULL</a>
-				<a class="plans-toggle" onclick="togglePlan(2)">LEGS</a>
-			</div>
-			<div class="table-container">
-				<table id="table">
-					<tr id="table-head"></tr>
-				</table>
+		<section id="locations" class="flex flex-dir-c flex-center">
+			<h3>Where we're at</h3>
+			<div class="slide-container">
+				<div class="slide slide-one">
+					<div class="numbertext"><h2>01</h2></div>
+					<img src="assets/gym_one-min.jpg" />
+					<div class="slide-text">
+						<h2 class="highlight">Göteborg</h2>
+						<p>Örgrytevägen 5, 402 22 Göteborg</p>
+					</div>
+				</div>
+				<div class="slide slide-two">
+					<div class="numbertext"><h2>02</h2></div>
+					<img src="assets/gym_two-min.jpg" />
+					<div class="slide-text">
+						<h2 class="highlight">Stockholm</h2>
+						<p>Galärvarvsvägen 14, 115 21 Stockholm</p>
+					</div>
+				</div>
+				<div class="slide slide-three">
+					<div class="numbertext"><h2>03</h2></div>
+					<img src="assets/gym_three-min.jpg" />
+					<div class="slide-text">
+						<h2 class="highlight">Växjö</h2>
+						<p>Klostergatan 10 B, 352 31 Växjö</p>
+					</div>
+				</div>
+				<a class="prev" onclick="plusSlides(-1)"
+					><i data-feather="chevron-left"></i>
+				</a>
+				<a class="next" onclick="plusSlides(1)">
+					<i data-feather="chevron-right"></i>
+				</a>
 			</div>
 		</section>
+		<footer></footer>
 		<script src="script.js" async defer></script>
 	</body>
 </html>

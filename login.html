@@ -13,12 +13,12 @@
 	<body>
 		<header id="header" class="flex">
 			<div class="header-content flex">
-				<a id="hamburger-menu" CurrentState="0" onclick="toggle()">
+				<a id="hamburger-menu" CurrentState="0" onclick="toggle(this)">
 					<i data-feather="menu"></i>
 				</a>
-				<div id="dropdown" class="hidden">
+				<div id="dropdown" class="hidden flex-dir-c flex-center">
 					<h3 class="dropdown-title">fitness forge</h3>
-					<ul class="dropdown-list">
+					<ul class="dropdown-list flex flex-dir-c">
 						<li><a href="login.html">Login</a></li>
 						<li><a href="register.html">Register</a></li>
 					</ul>
@@ -26,7 +26,7 @@
 				<div class="navbar flex">
 					<a href="index.html">home</a>
 					<a href="#about">About</a>
-					<a href="#">plans</a>
+					<a href="#plans">plans</a>
 					<a href="#pricing">price</a>
 					<a href="#locations">locations</a>
 				</div>
@@ -35,11 +35,11 @@
 		<main class="login-main">
 			<h1>LOG IN</h1>
 			<form id="login-form" class="flex flex-dir-c" action="">
-				<div class="field">
+				<div class="field flex">
 					<label for="username">username *</label>
 					<input name="username" type="text" />
 				</div>
-				<div class="field">
+				<div class="field flex">
 					<label for="password">password *</label>
 					<input type="password" name="password" />
 				</div>
