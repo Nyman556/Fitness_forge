@@ -230,7 +230,6 @@ a:hover[href] {
 
 /*plans section*/
 #plans {
-	align-items: center;
 	gap: 1rem;
 }
 .toggle-plans-container {
